@@ -11,6 +11,9 @@ module.exports = app => {
   router.post('/uploads', controller.upload.indexs)
   //登录
   
+  router.get('/getalltag',controller.node.index)
+  router.post('/publishnode',controller.node.addnode)
+
   router.post('/userlogin',controller.userlogin.login)
   // 注册
   router.post('/userreg',controller.userreg.reg)

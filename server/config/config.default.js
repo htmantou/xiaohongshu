@@ -62,12 +62,13 @@ module.exports = appInfo => {
     listen: {
       path: '',
       port: 88,
-      hostname: 'localhost'//默认localhost和ip地址,上线时用0.0.0.0
+      hostname: '192.168.5.151',//默认localhost和ip地址,上线时用0.0.0.0
     }
   };
 
   config.multipart = {
-    mode: 'file'
+    mode: 'file',
+    fileSize:1048576000,
   }
 
   exports.mysql = {

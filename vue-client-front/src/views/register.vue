@@ -6,32 +6,9 @@
     <nav>
       <div class="aboutlogin">
         <el-tabs v-model="activeName" @tab-click="handleClick">
-          <el-tab-pane label="登录" name="first">
-            <el-form
-              :model="ruleForm"
-              :rules="rules"
-              ref="ruleForm"
-              label-width="100px"
-              class="demo-ruleForm"
-            >
-              <div class="nav-login">
-                <el-form-item label="用户名" prop="name">
-                  <el-input v-model="ruleForm.name"></el-input>
-                </el-form-item>
-                <el-form-item label="密码" prop="password">
-                  <el-input v-model="ruleForm.password"></el-input>
-                </el-form-item>
-                <el-form-item>
-                  <el-button type="primary" @click="submitForm('ruleForm')"
-                    >登录</el-button
-                  >
-                  <el-button @click="resetForm('ruleForm')">重置</el-button>
-                </el-form-item>
-              </div>
-            </el-form>
-          </el-tab-pane>
+          <el-tab-pane label="登录" name="first"> </el-tab-pane>
 
-          <el-tab-pane label="注册" name="second" @click="pushTore">
+          <el-tab-pane label="注册" name="second">
             <el-form
               :model="ruleForm"
               :rules="rules"
@@ -60,7 +37,6 @@
                   <el-button type="primary" @click="submitForm('ruleForm')"
                     >注册</el-button
                   >
-                  <el-button @click="resetForm('ruleForm')">重置</el-button>
                 </el-form-item>
               </div>
             </el-form>
@@ -72,14 +48,6 @@
 </template>
 
 <script>
-// axios({
-//   method: 'post',
-//   url: '/user',
-//   data: {
-//     firstName: 'Fred',
-//     lastName: 'Flintstone'
-//   }
-// });
 export default {
   data() {
     let validatePass = (rules, value, callBack) => {
@@ -104,7 +72,6 @@ export default {
       ruleForm: {
         name: "",
         password: "",
-        type: [],
         gender: "",
         tellphone: "",
       },
@@ -133,49 +100,37 @@ export default {
           },
           { validator: tellphone, trigger: "blur" },
         ],
-        // type: [
-        //   {
-        //     type: "array",
-        //     required: true,
-        //     message: "请至少选择一个活动性质",
-        //     trigger: "change",
-        //   },
-        // ],
         gender: [{ required: true, message: "请选择性别", trigger: "change" }],
       },
     };
   },
   methods: {
     handleClick(tab, event) {
-      // console.log(tab, event);
-
-      // console.log(this);
-      // if (this.$route.fullPath == "/register") {
-      //   this.$router.push("/register"); 
-      // } else {
-      //   this.$router.push("/login");
-      // }
       this.$router.push("/login");
     },
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          // this.$message("连接后端");
-          //返回到.......
-          // this.$http.post('/userreg',this.ruleForm).then((res)=>{
-          //   console.log(res.data)//判断后端返回数据code-0或1
+          this.$axios.post("/userreg", this.ruleForm).then((res) => {
+            if (res.data.code == 1) {
+              this.$message({
+                message: "注册成功",
+                type: "success",
+              });
+              //返回页面需要具体
+              this.$router.push("/login");
+            } else {
+              // this.$message("登录不通过");
+              this.$message.error(res.data.msg);
+            }
 
-          // })
-          this.$router.push("/");
+            // console.log(res.data.code)//判断后端返回数据code-0或1
+          });
         } else {
-          console.log("没有通过前端验证");
+          // console.log("没有通过前端验证");
           return false;
         }
       });
-    },
-    pushTore() {
-      console.log("1");
-      this.$router.push("/register");
     },
   },
 };

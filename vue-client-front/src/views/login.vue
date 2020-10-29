@@ -5,7 +5,7 @@
     </header>
     <nav>
       <div class="aboutlogin">
-        <el-tabs v-model="activeName" @tab-click="handleClick">
+        <el-tabs v-model="activeName" @tab-click="handleClick"> 
           <el-tab-pane label="登录" name="first">
             <el-form
               :model="ruleForm"
@@ -72,14 +72,7 @@
 </template>
 
 <script>
-axios({
-  method: 'post',
-  url: '/user',
-  data: {
-    firstName: 'Fred',
-    lastName: 'Flintstone'
-  }
-});
+
 export default {
   data() {
     let validatePass = (rules, value, callBack) => {
@@ -104,9 +97,6 @@ export default {
       ruleForm: {
         name: "",
         password: "",
-        type: [],
-        gender: "",
-        tellphone:""
       },
       rules: {
         name: [
@@ -123,46 +113,51 @@ export default {
           },
           { validator: validatePass, trigger: "blur" },
         ],
-        tellphone: [
-          { required: true, message: "请输入手机号", trigger: "blur" },
-          {
-            min: 11,
-            max: 11,
-            message: "请输入正确的手机号",
-            trigger: "blur",
-          },
-          { validator: tellphone, trigger: "blur" },
-        ],
-        // type: [
-        //   {
-        //     type: "array",
-        //     required: true,
-        //     message: "请至少选择一个活动性质",
-        //     trigger: "change",
-        //   },
-        // ],
-        gender: [
-          { required: true, message: "请选择性别", trigger: "change" },
-        ],
+       
+       
       },
     };
   },
   methods: {
-    handleClick(tab, event) {
-      console.log(tab, event);
+   handleClick(tab, event) {
+      // console.log(tab, event);
+       this.$router.push("/register");
+
+      console.log(this);
+     
     },
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$message("连接后端");
+          // this.$message("连接后端");
+         
+           this.$axios.post('/userlogin',this.ruleForm).then((res)=>{
+            
+             if(res.data.code == 1){
+               this.$message({
+                message: '登录成功',
+                type: 'success'
+              });
+               //返回页面需要具体
+                this.$router.push("/Test");
+             }else{
+                // this.$message("登录不通过");
+                this.$message.error(res.data.msg);
+             }
+
+            // console.log(res.data.code)//判断后端返回数据code-0或1
+
+          })
           //返回到.......
-          this.$router.push("/");
+          
         } else {
-          console.log("没有通过前端验证");
+          console.log("没有通过前端验证!");
           return false;
         }
       });
-    },
+    }
+     
+    
   },
 };
 </script>

@@ -18,9 +18,10 @@ export default {
 
 <style scoped lang='scss'>
 .content-top-nav {
+  margin-top: 100px;
   height: 500px;
   width: 100%;
-  background-color: khaki;
+  // background-color: khaki;
   display: flex;
   justify-content: center;
 }

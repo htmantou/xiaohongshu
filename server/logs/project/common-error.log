@@ -2146,3 +2146,212 @@ name: "ER_NO_DEFAULT_FOR_FIELDError"
 pid: 20292
 hostname: BN6BA2A2TJYV3R8
 
+2020-10-30 10:26:18,007 ERROR 8360 [-/192.168.5.151/-/141ms POST /upload] nodejs.ENOENTError: ENOENT: no such file or directory, copyfile 'C:\Users\ADMINI~1\AppData\Local\Temp\egg-multipart-tmp\project\2020\10\30\10\a76b4ac0-8582-40b6-886b-4fede140b371.mp4' -> 'C:\Users\Administrator\Desktop\xiaohongshu\server\app/public/mp4/a76b4ac0-8582-40b6-886b-4fede140b371.mp4'
+    at Object.copyFileSync (fs.js:1882:3)
+    at UploadController.index (C:\Users\Administrator\Desktop\xiaohongshu\server\app\controller\upload.js:12:12)
+    at Object.callFn (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_egg-core@4.20.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_egg-core@4.20.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+errno: -4058
+syscall: "copyfile"
+code: "ENOENT"
+path: "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\egg-multipart-tmp\\project\\2020\\10\\30\\10\\a76b4ac0-8582-40b6-886b-4fede140b371.mp4"
+dest: "C:\\Users\\Administrator\\Desktop\\xiaohongshu\\server\\app/public/mp4/a76b4ac0-8582-40b6-886b-4fede140b371.mp4"
+headers: {"Access-Control-Allow-Origin":"*","Access-Control-Allow-Credentials":"true","vary":"Origin"}
+name: "ENOENTError"
+pid: 8360
+hostname: SC-202006081301
+
+2020-10-30 10:26:22,805 ERROR 8360 [-/192.168.5.151/-/7ms POST /uploads] nodejs.ENOENTError: ENOENT: no such file or directory, copyfile 'C:\Users\ADMINI~1\AppData\Local\Temp\egg-multipart-tmp\project\2020\10\30\10\d1491dbf-ecba-4cad-afcb-d4e048e2dce1.jpg' -> 'C:\Users\Administrator\Desktop\xiaohongshu\server\app/public/img/d1491dbf-ecba-4cad-afcb-d4e048e2dce1.jpg'
+    at Object.copyFileSync (fs.js:1882:3)
+    at UploadController.indexs (C:\Users\Administrator\Desktop\xiaohongshu\server\app\controller\upload.js:21:12)
+    at Object.callFn (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_egg-core@4.20.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_egg-core@4.20.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+errno: -4058
+syscall: "copyfile"
+code: "ENOENT"
+path: "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\egg-multipart-tmp\\project\\2020\\10\\30\\10\\d1491dbf-ecba-4cad-afcb-d4e048e2dce1.jpg"
+dest: "C:\\Users\\Administrator\\Desktop\\xiaohongshu\\server\\app/public/img/d1491dbf-ecba-4cad-afcb-d4e048e2dce1.jpg"
+headers: {"Access-Control-Allow-Origin":"*","Access-Control-Allow-Credentials":"true","vary":"Origin"}
+name: "ENOENTError"
+pid: 8360
+hostname: SC-202006081301
+
+2020-10-30 10:26:26,849 ERROR 8360 [-/192.168.5.151/-/5ms POST /uploads] nodejs.ENOENTError: ENOENT: no such file or directory, copyfile 'C:\Users\ADMINI~1\AppData\Local\Temp\egg-multipart-tmp\project\2020\10\30\10\f07da5ed-5877-429a-8b8a-d405349ed8ef.jpg' -> 'C:\Users\Administrator\Desktop\xiaohongshu\server\app/public/img/f07da5ed-5877-429a-8b8a-d405349ed8ef.jpg'
+    at Object.copyFileSync (fs.js:1882:3)
+    at UploadController.indexs (C:\Users\Administrator\Desktop\xiaohongshu\server\app\controller\upload.js:21:12)
+    at Object.callFn (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_egg-core@4.20.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_egg-core@4.20.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+errno: -4058
+syscall: "copyfile"
+code: "ENOENT"
+path: "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\egg-multipart-tmp\\project\\2020\\10\\30\\10\\f07da5ed-5877-429a-8b8a-d405349ed8ef.jpg"
+dest: "C:\\Users\\Administrator\\Desktop\\xiaohongshu\\server\\app/public/img/f07da5ed-5877-429a-8b8a-d405349ed8ef.jpg"
+headers: {"Access-Control-Allow-Origin":"*","Access-Control-Allow-Credentials":"true","vary":"Origin"}
+name: "ENOENTError"
+pid: 8360
+hostname: SC-202006081301
+
+2020-10-30 10:26:38,904 ERROR 8360 [-/192.168.5.151/-/5ms POST /uploads] nodejs.ENOENTError: ENOENT: no such file or directory, copyfile 'C:\Users\ADMINI~1\AppData\Local\Temp\egg-multipart-tmp\project\2020\10\30\10\3c141691-832f-4c84-9c30-5424d8b1f6ae.jpg' -> 'C:\Users\Administrator\Desktop\xiaohongshu\server\app/public/img/3c141691-832f-4c84-9c30-5424d8b1f6ae.jpg'
+    at Object.copyFileSync (fs.js:1882:3)
+    at UploadController.indexs (C:\Users\Administrator\Desktop\xiaohongshu\server\app\controller\upload.js:21:12)
+    at Object.callFn (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_egg-core@4.20.0@egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_egg-core@4.20.0@egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_@eggjs_router@2.0.0@@eggjs\router\lib\router.js:190:18
+    at dispatch (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+errno: -4058
+syscall: "copyfile"
+code: "ENOENT"
+path: "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\egg-multipart-tmp\\project\\2020\\10\\30\\10\\3c141691-832f-4c84-9c30-5424d8b1f6ae.jpg"
+dest: "C:\\Users\\Administrator\\Desktop\\xiaohongshu\\server\\app/public/img/3c141691-832f-4c84-9c30-5424d8b1f6ae.jpg"
+headers: {"Access-Control-Allow-Origin":"*","Access-Control-Allow-Credentials":"true","vary":"Origin"}
+name: "ENOENTError"
+pid: 8360
+hostname: SC-202006081301
+
+2020-10-30 10:28:07,816 ERROR 18116 nodejs.EPERMError: EPERM: operation not permitted, watch
+    at FSEvent.FSWatcher._handle.onchange (internal/fs/watchers.js:127:28)
+errno: -4048
+syscall: "watch"
+code: "EPERM"
+filename: null
+dir: "C:\\Users\\Administrator\\Desktop\\xiaohongshu\\server\\app\\public\\mp4\\img"
+name: "EPERMError"
+pid: 18116
+hostname: SC-202006081301
+
+2020-10-30 10:40:10,571 ERROR 8360 [-/undefined/-/132ms GET /public/mp4/14d73dd7-b201-42b9-8ea8-785eff98a285.mp4] nodejs.ECONNABORTEDError: write ECONNABORTED
+    at afterWriteDispatched (internal/stream_base_commons.js:154:25)
+    at writeGeneric (internal/stream_base_commons.js:145:3)
+    at Socket._writeGeneric (net.js:786:11)
+    at Socket._write (net.js:798:8)
+    at doWrite (_stream_writable.js:403:12)
+    at clearBuffer (_stream_writable.js:542:7)
+    at Socket.Writable.uncork (_stream_writable.js:338:7)
+    at ServerResponse.OutgoingMessage.uncork (_http_outgoing.js:244:17)
+    at connectionCorkNT (_http_outgoing.js:690:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+errno: "ECONNABORTED"
+code: "ECONNABORTED"
+syscall: "write"
+headerSent: true
+name: "ECONNABORTEDError"
+pid: 8360
+hostname: SC-202006081301
+
+2020-10-30 10:40:29,572 ERROR 8360 [-/undefined/-/307ms GET /public/mp4/14d73dd7-b201-42b9-8ea8-785eff98a285.mp4] nodejs.ECONNRESETError: write ECONNRESET
+    at WriteWrap.onWriteComplete [as oncomplete] (internal/stream_base_commons.js:92:16)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "write"
+headerSent: true
+name: "ECONNRESETError"
+pid: 8360
+hostname: SC-202006081301
+
+2020-10-30 10:44:29,642 ERROR 8360 [-/undefined/-/201ms GET /public/mp4/14d73dd7-b201-42b9-8ea8-785eff98a285.mp4] nodejs.ECONNRESETError: write ECONNRESET
+    at WriteWrap.onWriteComplete [as oncomplete] (internal/stream_base_commons.js:92:16)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "write"
+headerSent: true
+name: "ECONNRESETError"
+pid: 8360
+hostname: SC-202006081301
+
+2020-10-30 10:45:45,851 ERROR 18116 nodejs.ClusterClientNoResponseError: client no response in 76637ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_cluster-client@3.0.1@cluster-client\lib\leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 18116
+hostname: SC-202006081301
+
+2020-10-30 10:51:57,585 ERROR 8360 nodejs.ECONNABORTEDError: write ECONNABORTED (address: 127.0.0.1:52591)
+    at afterWriteDispatched (internal/stream_base_commons.js:154:25)
+    at writeGeneric (internal/stream_base_commons.js:145:3)
+    at Socket._writeGeneric (net.js:786:11)
+    at Socket._write (net.js:798:8)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at Socket.Writable.write (_stream_writable.js:318:11)
+    at Follower.sendHeartBeat (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_tcp-base@3.1.0@tcp-base\lib\base.js:105:18)
+    at Timeout._onTimeout (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_tcp-base@3.1.0@tcp-base\lib\base.js:437:12)
+    at listOnTimeout (internal/timers.js:549:17)
+errno: "ECONNABORTED"
+code: "ECONNABORTED"
+syscall: "write"
+name: "ECONNABORTEDError"
+pid: 8360
+hostname: SC-202006081301
+
+2020-10-30 10:51:57,609 ERROR 8360 [-/undefined/-/14ms GET /public/mp4/14d73dd7-b201-42b9-8ea8-785eff98a285.mp4] nodejs.ECONNABORTEDError: write ECONNABORTED
+    at afterWriteDispatched (internal/stream_base_commons.js:154:25)
+    at writeGeneric (internal/stream_base_commons.js:145:3)
+    at Socket._writeGeneric (net.js:786:11)
+    at Socket._write (net.js:798:8)
+    at doWrite (_stream_writable.js:403:12)
+    at clearBuffer (_stream_writable.js:542:7)
+    at Socket.Writable.uncork (_stream_writable.js:338:7)
+    at ServerResponse.OutgoingMessage.uncork (_http_outgoing.js:244:17)
+    at connectionCorkNT (_http_outgoing.js:690:8)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+errno: "ECONNABORTED"
+code: "ECONNABORTED"
+syscall: "write"
+headerSent: true
+name: "ECONNABORTEDError"
+pid: 8360
+hostname: SC-202006081301
+
+2020-10-30 10:51:57,954 ERROR 8360 [-/undefined/-/287ms GET /public/mp4/14d73dd7-b201-42b9-8ea8-785eff98a285.mp4] nodejs.ECONNRESETError: write ECONNRESET
+    at WriteWrap.onWriteComplete [as oncomplete] (internal/stream_base_commons.js:92:16)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "write"
+headerSent: true
+name: "ECONNRESETError"
+pid: 8360
+hostname: SC-202006081301
+
+2020-10-30 10:53:32,302 ERROR 8360 [-/undefined/-/120ms GET /public/mp4/14d73dd7-b201-42b9-8ea8-785eff98a285.mp4] nodejs.ECONNRESETError: write ECONNRESET
+    at WriteWrap.onWriteComplete [as oncomplete] (internal/stream_base_commons.js:92:16)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "write"
+headerSent: true
+name: "ECONNRESETError"
+pid: 8360
+hostname: SC-202006081301
+
+2020-10-30 16:28:57,852 ERROR 10180 [-/undefined/-/309ms GET /public/mp4/14d73dd7-b201-42b9-8ea8-785eff98a285.mp4] nodejs.ECONNRESETError: write ECONNRESET
+    at WriteWrap.onWriteComplete [as oncomplete] (internal/stream_base_commons.js:92:16)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "write"
+headerSent: true
+name: "ECONNRESETError"
+pid: 10180
+hostname: SC-202006081301
+

@@ -24,7 +24,7 @@
                   <el-input v-model="ruleForm.tellphone"></el-input>
                 </el-form-item>
                 <el-form-item label="密码" prop="password">
-                  <el-input v-model="ruleForm.password"></el-input>
+                  <el-input type="password" v-model="ruleForm.password" auto-complete="off"></el-input>
                 </el-form-item>
 
                 <el-form-item label="性别" prop="gender">

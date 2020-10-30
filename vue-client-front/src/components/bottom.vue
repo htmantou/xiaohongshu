@@ -44,16 +44,33 @@ export default {
 
 <style scoped lang="scss">
 .bottom-nav {
+<<<<<<< HEAD
   width: 1080px;
   margin: 0 auto;
 }
 .bottom-one {
+=======
+  width: 100%;
+  bottom: 0;
+  z-index: 9999;
+  background-color: rgba(0,0,0,0.1);
+  margin: 0 auto;
+
+}
+.bottom-one {
+  margin: 0  300px;
+>>>>>>> 7b4ebad51f3bff57ea08a725bf6653570bed1ecb
   display: flex;
   justify-content: space-around;
   font-size: 14px;
   font-weight: 500;
+<<<<<<< HEAD
   color: #fff;
   background-color: khaki;
+=======
+  color: #aaa;
+  margin-bottom: 24px;
+>>>>>>> 7b4ebad51f3bff57ea08a725bf6653570bed1ecb
   font-family: PingFang SC, Helvetica, Arial, sans-serif;
   div {
     cursor: pointer;
@@ -65,7 +82,11 @@ export default {
   font-family: PingFang SC, Helvetica, Arial, sans-serif;
   color: #999;
   display: flex;
+<<<<<<< HEAD
   height: 18px;
+=======
+  height: 20px;
+>>>>>>> 7b4ebad51f3bff57ea08a725bf6653570bed1ecb
   justify-content: center;
   span {
     line-height: 18px;

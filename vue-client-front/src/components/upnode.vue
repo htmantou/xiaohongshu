@@ -52,8 +52,18 @@
         clearable
       >
       </el-input>
+<<<<<<< HEAD
         <wange @getcontentmasg='contentmsg'></wange>
 
+=======
+      <el-input
+        type="textarea"
+        :autosize="{ minRows: 6, maxRows: 30 }"
+        placeholder="填写笔记的内容，最多1000字"
+        v-model="nodecontent"
+      >
+      </el-input>
+>>>>>>> 7b4ebad51f3bff57ea08a725bf6653570bed1ecb
       <el-checkbox-group v-model="checkList">
         <el-checkbox
           v-for="item in taglist"
@@ -88,9 +98,12 @@ export default {
     };
   },
   methods: {
+<<<<<<< HEAD
     contentmsg(msg){
       this.nodecontent=msg
     },
+=======
+>>>>>>> 7b4ebad51f3bff57ea08a725bf6653570bed1ecb
     getBigectURL() {
       // console.log("getBigectURL", event);
       console.dir(this.$refs.videomsg.files[0]);
@@ -127,7 +140,11 @@ export default {
     },
     handleAvatarSuccess(res, file) {
       this.imageUrl = URL.createObjectURL(file.raw);
+<<<<<<< HEAD
       this.imgurl = res.imgurl;
+=======
+      this.imgurl=res.imgurl;
+>>>>>>> 7b4ebad51f3bff57ea08a725bf6653570bed1ecb
     },
     beforeAvatarUpload(file) {
       const isJPG = file.type === "image/jpeg";
@@ -157,8 +174,13 @@ export default {
               }
             });
           });
+<<<<<<< HEAD
           formdata.taglist = this.submittaglist;
           this.$axios.post("/publishnode", formdata);
+=======
+          formdata.taglist=this.submittaglist;
+          this.$axios.post("/publishnode",formdata);
+>>>>>>> 7b4ebad51f3bff57ea08a725bf6653570bed1ecb
         } else {
           this.$message.error("内容不能为空哦");
         }
@@ -183,12 +205,22 @@ export default {
 
 <style scoped lang='scss'>
 .upnode-nav {
+<<<<<<< HEAD
   width: 1536px;
   height: 867px;
   display: flex;
   justify-content: space-evenly;
   background-color: #f5f8fa;
   overflow: hidden;
+=======
+  width: 920px;
+  height: 867px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+  overflow: hidden;
+  margin: 50px auto;
+>>>>>>> 7b4ebad51f3bff57ea08a725bf6653570bed1ecb
 }
 .nodemp3 {
   width: 315px;
@@ -219,8 +251,11 @@ export default {
   width: 430px;
   height: 680px;
   margin-top: 115px;
+<<<<<<< HEAD
   // background-color: lawngreen;
   margin-left: -80px;
+=======
+>>>>>>> 7b4ebad51f3bff57ea08a725bf6653570bed1ecb
   text-align: left;
   h3 {
     font-weight: 500;
@@ -229,7 +264,10 @@ export default {
     color: #333;
   }
   i {
+<<<<<<< HEAD
     border: 1px dashed #d9d9d9;
+=======
+>>>>>>> 7b4ebad51f3bff57ea08a725bf6653570bed1ecb
     border-radius: 6px;
     cursor: pointer;
     width: 100.5px;
@@ -331,9 +369,15 @@ export default {
 }
 .el-checkbox-group {
   text-align: left;
+<<<<<<< HEAD
   margin-top: 10px;
 }
 .el-button.is-round {
   margin-top: 10px;
+=======
+}
+.el-button.is-round {
+  margin-top: 60px;
+>>>>>>> 7b4ebad51f3bff57ea08a725bf6653570bed1ecb
 }
 </style>

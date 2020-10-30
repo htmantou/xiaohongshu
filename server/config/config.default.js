@@ -62,7 +62,7 @@ module.exports = appInfo => {
     listen: {
       path: '',
       port: 88,
-      hostname: '192.168.5.151',//默认localhost和ip地址,上线时用0.0.0.0
+      hostname: '192.168.12.106',//默认localhost和ip地址,上线时用0.0.0.0
     }
   };
 

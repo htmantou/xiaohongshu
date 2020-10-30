@@ -1,10 +1,21 @@
 <template>
-  <div class="nav"></div>
+  <div class="nav">
+    <nodeauthor></nodeauthor>
+    <relevanttag></relevanttag>
+    <correnode></correnode>
+  </div>
 </template>
 
 <script>
+import nodeauthor from'./nodeauthor'
+import relevanttag from './relevanttag'
+import correnode from './correnode'
 export default {
-
+components:{
+  nodeauthor:nodeauthor,
+  relevanttag:relevanttag,
+  correnode:correnode
+}
 }
 </script>
 
@@ -12,7 +23,7 @@ export default {
 .nav{
     width: 320px;
     height: 500px;
-    background-color: lightcyan;
+    /* background-color: lightcyan; */
     margin-left: 20px;
 }
 </style>

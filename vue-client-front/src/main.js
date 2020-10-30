@@ -6,15 +6,11 @@ import store from './store'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import axios from 'axios';
-<<<<<<< HEAD
-axios.defaults.baseURL = ' http://192.168.5.151:88';
-Vue.prototype.$axios = axios;
-=======
+
 axios.defaults.baseURL = 'http://192.168.5.151:88';
 Vue.prototype.$axios = axios;
 import './assets/iconfont/iconfont.css';
 
->>>>>>> 7b4ebad51f3bff57ea08a725bf6653570bed1ecb
 // 要用axios的时候直接this.$axios
 
 //注册公用组件

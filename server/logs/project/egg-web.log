@@ -5961,3 +5961,68 @@ hostname: BN6BA2A2TJYV3R8
 2020-10-29 15:48:57,800 INFO 26232 [egg-watcher:application] watcher start success
 2020-10-29 15:48:57,806 INFO 26232 [egg-mysql] instance[0] status OK, rds currentTime: Thu Oct 29 2020 15:48:57 GMT+0800 (GMT+08:00)
 2020-10-29 15:48:57,841 INFO 26232 [egg:core] dump config after ready, 33ms
+2020-10-30 10:04:41,909 INFO 1472 [egg:logger] init all loggers with options: {"dir":"C:\\Users\\Administrator\\Desktop\\xiaohongshu\\server\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-10-30 10:04:41,937 INFO 1472 [egg-multipart] file mode enable
+2020-10-30 10:04:41,937 INFO 1472 [egg-multipart] will save temporary files to "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\egg-multipart-tmp\\project", cleanup job cron: "0 30 4 * * *"
+2020-10-30 10:04:41,937 INFO 1472 [egg-mysql] connecting root@localhost:3306/yebook
+2020-10-30 10:04:42,113 INFO 1472 [egg-static] starting static serve /public/ -> C:\Users\Administrator\Desktop\xiaohongshu\server\app\public
+2020-10-30 10:04:42,116 INFO 1472 [egg-security] use methodnoallow middleware
+2020-10-30 10:04:42,117 INFO 1472 [egg-security] use noopen middleware
+2020-10-30 10:04:42,118 INFO 1472 [egg-security] use nosniff middleware
+2020-10-30 10:04:42,119 INFO 1472 [egg-security] use xssProtection middleware
+2020-10-30 10:04:42,120 INFO 1472 [egg-security] use xframe middleware
+2020-10-30 10:04:42,120 INFO 1472 [egg-security] use dta middleware
+2020-10-30 10:04:42,120 INFO 1472 [egg-security] compose 6 middlewares into one security middleware
+2020-10-30 10:04:42,132 INFO 1472 [egg:core] dump config after load, 6ms
+2020-10-30 10:04:42,146 INFO 1472 [egg-watcher:application] watcher start success
+2020-10-30 10:08:43,106 INFO 8360 [egg:logger] init all loggers with options: {"dir":"C:\\Users\\Administrator\\Desktop\\xiaohongshu\\server\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-10-30 10:08:43,133 INFO 8360 [egg-multipart] file mode enable
+2020-10-30 10:08:43,133 INFO 8360 [egg-multipart] will save temporary files to "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\egg-multipart-tmp\\project", cleanup job cron: "0 30 4 * * *"
+2020-10-30 10:08:43,133 INFO 8360 [egg-mysql] connecting root@localhost:3306/yebook
+2020-10-30 10:08:43,306 INFO 8360 [egg-static] starting static serve /public/ -> C:\Users\Administrator\Desktop\xiaohongshu\server\app\public
+2020-10-30 10:08:43,309 INFO 8360 [egg-security] use methodnoallow middleware
+2020-10-30 10:08:43,309 INFO 8360 [egg-security] use noopen middleware
+2020-10-30 10:08:43,310 INFO 8360 [egg-security] use nosniff middleware
+2020-10-30 10:08:43,311 INFO 8360 [egg-security] use xssProtection middleware
+2020-10-30 10:08:43,311 INFO 8360 [egg-security] use xframe middleware
+2020-10-30 10:08:43,312 INFO 8360 [egg-security] use dta middleware
+2020-10-30 10:08:43,312 INFO 8360 [egg-security] compose 6 middlewares into one security middleware
+2020-10-30 10:08:43,324 INFO 8360 [egg:core] dump config after load, 6ms
+2020-10-30 10:08:43,338 INFO 8360 [egg-watcher:application] watcher start success
+2020-10-30 10:08:43,400 INFO 8360 [egg-mysql] instance[0] status OK, rds currentTime: Fri Oct 30 2020 10:08:43 GMT+0800 (GMT+08:00)
+2020-10-30 10:08:43,407 INFO 8360 [egg:core] dump config after ready, 6ms
+2020-10-30 10:51:57,588 ERROR 8360 nodejs.ECONNABORTEDError: write ECONNABORTED (address: 127.0.0.1:52591)
+    at afterWriteDispatched (internal/stream_base_commons.js:154:25)
+    at writeGeneric (internal/stream_base_commons.js:145:3)
+    at Socket._writeGeneric (net.js:786:11)
+    at Socket._write (net.js:798:8)
+    at doWrite (_stream_writable.js:403:12)
+    at writeOrBuffer (_stream_writable.js:387:5)
+    at Socket.Writable.write (_stream_writable.js:318:11)
+    at Follower.sendHeartBeat (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_tcp-base@3.1.0@tcp-base\lib\base.js:105:18)
+    at Timeout._onTimeout (C:\Users\Administrator\Desktop\xiaohongshu\server\node_modules\_tcp-base@3.1.0@tcp-base\lib\base.js:437:12)
+    at listOnTimeout (internal/timers.js:549:17)
+errno: "ECONNABORTED"
+code: "ECONNABORTED"
+syscall: "write"
+name: "ECONNABORTEDError"
+pid: 8360
+hostname: SC-202006081301
+
+2020-10-30 10:51:57,590 WARN 8360 [ClusterClient:Watcher] follower closed, and try to init it again
+2020-10-30 16:28:35,487 INFO 10180 [egg:logger] init all loggers with options: {"dir":"C:\\Users\\Administrator\\Desktop\\xiaohongshu\\server\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-10-30 16:28:35,531 INFO 10180 [egg-multipart] file mode enable
+2020-10-30 16:28:35,531 INFO 10180 [egg-multipart] will save temporary files to "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\egg-multipart-tmp\\project", cleanup job cron: "0 30 4 * * *"
+2020-10-30 16:28:35,532 INFO 10180 [egg-mysql] connecting root@localhost:3306/yebook
+2020-10-30 16:28:35,821 INFO 10180 [egg-static] starting static serve /public/ -> C:\Users\Administrator\Desktop\xiaohongshu\server\app\public
+2020-10-30 16:28:35,825 INFO 10180 [egg-security] use methodnoallow middleware
+2020-10-30 16:28:35,826 INFO 10180 [egg-security] use noopen middleware
+2020-10-30 16:28:35,829 INFO 10180 [egg-security] use nosniff middleware
+2020-10-30 16:28:35,830 INFO 10180 [egg-security] use xssProtection middleware
+2020-10-30 16:28:35,831 INFO 10180 [egg-security] use xframe middleware
+2020-10-30 16:28:35,832 INFO 10180 [egg-security] use dta middleware
+2020-10-30 16:28:35,832 INFO 10180 [egg-security] compose 6 middlewares into one security middleware
+2020-10-30 16:28:35,850 INFO 10180 [egg:core] dump config after load, 8ms
+2020-10-30 16:28:35,873 INFO 10180 [egg-watcher:application] watcher start success
+2020-10-30 16:28:35,877 INFO 10180 [egg-mysql] instance[0] status OK, rds currentTime: Fri Oct 30 2020 16:28:35 GMT+0800 (GMT+08:00)
+2020-10-30 16:28:35,889 INFO 10180 [egg:core] dump config after ready, 10ms

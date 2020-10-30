@@ -7,8 +7,8 @@
       </div>
       <div class="pf-username" @load="icon">
         <h1 class="username">{{ username }}</h1>
-        <span class="icon iconfont iconexit" v-show="icont==true" style="color:blue;">&#xe609;</span>
-        <span class="icon iconfont iconexit" v-show="icont==false">&#xe608;</span>
+        <span class="icon iconfont iconexit" v-show="icont==true" style="color:blue;">&#xe610;</span>
+        <span class="icon iconfont iconexit" v-show="icont==false" style="color:pink">&#xe603;</span>
       </div>
       <div class="myactive">
         <ul class="myaf">
@@ -38,10 +38,11 @@
 export default {
   data() {
     return {
-      header:"https://img.xiaohongshu.com/avatar/5f3ca471c4ee5b00011f914b.jpg@240w_240h_90q_1e_1c_1x.jpg",
-      username: "用户1",
+      id:'',
+      header:'',
+      sexs:'',
+      username:'',
       icont:true,
-      sex:1,
       dis:false
       
     }
@@ -60,6 +61,22 @@ export default {
       this.$router.push("/login")
     }
   },
+  created(){
+    //获取用户头像
+     this.$axios.get('/getheader')
+    .then(res=>{
+      let data = res.data
+      console.log(data);
+      data.map(element => { 
+        this.id=element.u_id;      
+      this.header=element.heads;
+      this.sexs=element.sexs;
+      console.log(element.u_id);
+      this.username=element.username;
+      });
+      
+    })
+  }
 };
 </script>
 
@@ -108,6 +125,7 @@ export default {
   opacity: 0.6;
   display: inline-block;
   font-size: 16px;
+  margin-right: 10px;
 }
 .iconfont {
   color: pink;
@@ -151,5 +169,9 @@ export default {
     font-size: 16px;
     font-weight: 500;
   }
-</style>>
+
+  .el-dropdown-menu__item{
+    width: 60px;
+  }
+</style>
 

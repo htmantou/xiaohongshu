@@ -9,6 +9,16 @@ module.exports = app => {
   router.post('/upload', controller.upload.index)
   // 多文件上传
   router.post('/uploads', controller.upload.indexs)
+  
+  //我的笔记获取接口
+  router.get('/getallnode',controller.user.index)
+
+  //我的笔记删除接口
+  router.post('/delnode',controller.user.indexs)
+
+  //获取用户头像及信息
+  router.get('/getheader',controller.user.getheader)
+  
   //登录
   
   router.post('/userlogin',controller.userlogin.login)

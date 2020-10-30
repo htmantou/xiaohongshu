@@ -125,6 +125,13 @@
       "unicode_decimal": 58893
     },
     {
+      "icon_id": "66361144",
+      "name": "女",
+      "font_class": "nv",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
       "icon_id": "54124507",
       "name": "left",
       "font_class": "left",
@@ -193,6 +200,13 @@
       "font_class": "head",
       "unicode": "e616",
       "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "66361145",
+      "name": "男",
+      "font_class": "nan",
+      "unicode": "e610",
+      "unicode_decimal": 58896
     },
     {
       "icon_id": "66208060",
@@ -270,6 +284,13 @@
       "font_class": "jia-copy",
       "unicode": "e77d",
       "unicode_decimal": 59261
+    },
+    {
+      "icon_id": "66319472",
+      "name": "童装",
+      "font_class": "diaodaiyi",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
     }
   ]
 }

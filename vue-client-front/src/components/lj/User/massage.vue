@@ -3,7 +3,7 @@
     <span>更换头像：</span>
     <el-upload
       class="avatar-uploader"
-      action="http://192.168.5.151:88/uploads"
+      action="http://192.168.43.135:88/upload"
       :show-file-list="false"
       :on-success="handleAvatarSuccess"
       :before-upload="beforeAvatarUpload"
@@ -12,24 +12,17 @@
       <i v-else class="el-icon-plus avatar-uploader-icon"></i>
     </el-upload>
     <div class="mycont">
-      <el-form ref="form" :model="form" label-width="80px">
+      <el-form ref="form"  label-width="80px">
         <el-form-item label="用户昵称">
-          <el-input v-model="form.name"></el-input>
+          <el-input v-model="name"></el-input>
         </el-form-item>
-        <el-form-item label="修改生日">
-          <el-col :span="11">
-            <el-date-picker
-              type="date"
-              placeholder="选择日期"
-              v-model="form.date1"
-              style="width: 100%;"
-            ></el-date-picker>
-          </el-col>
+        <el-form-item label="输入生日">
+          <el-input v-model="date"></el-input><span>例：****-**-**</span>
         </el-form-item>
         <el-form-item label="修改性别">
-          <el-radio-group v-model="form.resource">
-            <el-radio label="男"></el-radio>
-            <el-radio label="女"></el-radio>
+          <el-radio-group v-model="resource">
+            <el-radio label="1">男</el-radio>
+            <el-radio label="0">女</el-radio>
           </el-radio-group>
         </el-form-item>
         <el-form-item>
@@ -46,21 +39,17 @@ export default {
   data() {
     return {
       imageUrl: "",
-       form: {
-          name: '',
-          region: '',
-          date1: '',
-          date2: '',
-          delivery: false,
-          type: [],
-          resource: '',
-          desc: ''
-        }
+      name: "",
+      date: "",
+      resource: "",
+      imgurl:""
     };
   },
   methods: {
     handleAvatarSuccess(res, file) {
       this.imageUrl = URL.createObjectURL(file.raw);
+      this.imgurl = res.imgurl;
+      console.log(this.imgurl);
     },
     beforeAvatarUpload(file) {
       const isJPG = file.type === "image/jpeg";
@@ -74,10 +63,30 @@ export default {
       }
       return isJPG && isLt2M;
     },
-     onSubmit() {
-        console.log('submit!');
-      }
-  }
+    onSubmit() {
+      let formdata = {};
+      formdata.username=this.name;
+      formdata.sexs=this.resource;
+      formdata.uid=this.$store.state.u_id;
+      formdata.heads=this.imgurl;
+      formdata.birthday=this.date;
+      this.$axios
+        .post("/updatauser",formdata)
+        .then(res => {
+          console.log(res);
+          if (res.data.code == 1) {
+            alert(res.data.msg);
+          } else {
+            alert(res.data.msg);
+          }
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+  },
+  created() {},
+  mouted() {}
 };
 </script>
 
@@ -114,19 +123,22 @@ export default {
   display: block;
 }
 
-.mycont{
+.mycont {
   margin-left: 20px;
   text-align: left;
 }
-.el-date-editor.el-input{
-  width: 220px!important;
-  line-height: 40px!important;
+.el-date-editor.el-input {
+  width: 220px !important;
+  line-height: 40px !important;
 }
 
-.el-icon-plus:before{
+.el-icon-plus:before {
   position: absolute;
-    top: 38px;
-    left: 38px;
+  top: 38px;
+  left: 38px;
 }
-
+.el-input {
+  width: 300px !important;
+  margin-right: 20px;
+}
 </style>

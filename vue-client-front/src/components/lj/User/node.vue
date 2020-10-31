@@ -31,7 +31,6 @@ export default {
       let a = el.target.previousElementSibling.firstElementChild.innerHTML
       console.dir(a);
       // console.log(el.target);
-
       this.$axios.post('/delnode',{
         id:a
       }).then(res=>{
@@ -51,7 +50,12 @@ export default {
     }
   },
   created() {
-    this.$axios.get('/getallnode')
+    //请求用户笔记
+    this.$axios.get('/getallnode',{
+      params:{
+        u_id:this.$store.state.u_id
+      }
+    })
     .then(res=>{
       console.log(res.data);
       let data = res.data
@@ -65,7 +69,6 @@ export default {
         console.log(this.imgsArr);
       });
     })
-    // this.changedel();
 
   }
 };

@@ -18,6 +18,9 @@ module.exports = app => {
 
   //获取用户头像及信息
   router.get('/getheader',controller.user.getheader)
+    //修改用户信息接口
+  router.post('/updatauser',controller.user.updatauser)
+  
   
   //登录
   

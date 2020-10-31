@@ -63,7 +63,11 @@ export default {
   },
   created(){
     //获取用户头像
-     this.$axios.get('/getheader')
+     this.$axios.get('/getheader',{
+       params:{
+        u_id:this.$store.state.u_id
+      }
+     })
     .then(res=>{
       let data = res.data
       console.log(data);

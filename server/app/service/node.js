@@ -1,12 +1,12 @@
 const Service = require('egg').Service;
 
 class NodeService extends Service {
-<<<<<<< HEAD
   //获取我的笔记
-  async getallnode() {
+  async getallnode(u_id) {
     // let uid = ctx.session.u_id;
+    console.log();
     const results = await this.app.mysql.select('node', { // 搜索 post 表
-      where: { u_id: '1',status:'1'}, // WHERE 条件
+      where: { u_id: u_id,status:'1'}, // WHERE 条件
       columns: ['n_id','nodetitle', 'imgs'], // 要查询的表字段
       orders: [['n_id','desc']], // 排序方式
     });
@@ -16,7 +16,7 @@ class NodeService extends Service {
   async delnode(id){
     const row = {
       status: 0,
-      // modifiedAt: this.app.mysql.literals.now, // `now()` on db server
+      modifiedAt: this.app.mysql.literals.now, // `now()` on db server
     };
     console.log(id);
     const options = {
@@ -41,43 +41,48 @@ class NodeService extends Service {
   }
 
   //获取用户信息
-  async gethead(){
-    // let uid = ctx.session.u_id;
+  async gethead(u_id){
+
     const results = await this.app.mysql.select('user', { // 搜索 post 表
-      where: { u_id: '1'}, // WHERE 条件
+      where: { u_id:u_id}, // WHERE 条件
       columns: ['u_id','username', 'sexs','heads'], // 要查询的表字段
       orders: [['u_id','desc']], // 排序方式
     });
     return results;
   }
+
+  //修改用户信息
+  async updatauser(formdata){
+
+    const row = {
+      username:formdata.username,
+      sexs:formdata.sexs,
+      heads:formdata.heads,
+      birthday:formdata.birthday,
+      // modifiedAt: this.app.mysql.literals.now, // `now()` on db server
+    };
+    console.log(formdata.username);
+    const options = {
+      where: {
+        u_id: formdata.uid
+      }
+    };
+    const results = await this.app.mysql.update('user',row,options);
+    let result = ''
+    if(results.affectedRows){
+      result={
+          code:1,
+          msg:"修改成功"
+      }
+    }else{
+      result={
+        code:0,
+        msg:"修改失败"
+      }
+    }
+    return result;
+  }
   
-=======
-  async getalltag() {
-    const results = await this.app.mysql.select('tag', { // 搜索 post 表
-      columns: ['t_id', 'tagname'], // 要查询的表字段
-    });
-    return results;
-  }
-  async addnode(formdata) {
-    const result = await this.app.mysql.insert('node', {
-      nodetitle: formdata.nodetitel,
-      imgs: formdata.imgs,
-      content: formdata.content,
-      video: formdata.video
-    }); // 在 post 表中，插入 title 为 Hello World 的记录
-    console.log(result)
-    return result
-  }
-  async addtnode(taglist, nid) {
-    console.log(nid)
-    taglist.forEach((item, index) => {
-      this.app.mysql.insert('tnode', {
-        t_id: item,
-        n_id: nid,
-      }); // 在 post 表中，插入 title 为 Hello World 的记录
-    })
-  }
->>>>>>> d12080ef47ecc419ccd6f9e8699966c347c41a58
 }
 
 
